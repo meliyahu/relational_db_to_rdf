@@ -1,4 +1,5 @@
 import psycopg2 as pg
+import psycopg2.extras as pg_ex
 import sys
 sys.path.append("..")
 import config as cfg
@@ -6,9 +7,9 @@ import config as cfg
 
 class ProcessCorvegSiteTable:
     def __init__(self):
-        params = cfg.config('corveg_database.ini')
+        params = cfg.config(filename='corveg_database.ini')
         self.conn = pg.connect(**params)
-        self.cur = self.conn.cursor()
+        self.cur = self.conn.cursor(cursor_factory=pg_ex.DictCursor)
 
     def generateTTLFile(self):
         try:
@@ -23,7 +24,9 @@ class ProcessCorvegSiteTable:
 
     def __process(self, rows):
         # TODO implement later
-        print(rows)
+        for row in rows:
+            print(f"Site Id: {row['site_id']}")
+            print(f"Description: {row['description']}\n")
 
 
 if __name__ == "__main__":
