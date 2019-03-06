@@ -1,0 +1,55 @@
+# baseURI: http://www.tern.org.au/cv/corveg/site-sample-level
+# imports: http://www.w3.org/2004/02/skos/core
+
+@prefix cv-corveg: <http://www.tern.org.au/cv/corveg/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cv-corveg:site-sample-level
+  rdf:type owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+.
+cv-corveg:site-sample-level-D
+  rdf:type rdfs:Class ;
+  rdf:type skos:Concept ;
+  skos:definition "Secondary site." ;
+  skos:prefLabel "Secondary Site" ;
+  skos:hiddenLabel "2" ;
+  skos:notation "D" ;
+.
+cv-corveg:site-sample-level-P
+  rdf:type rdfs:Class ;
+  rdf:type skos:Concept ;
+  skos:definition "Primary site." ;
+  skos:prefLabel "Primary Site" ;
+  skos:hiddenLabel "1" ;
+  skos:notation "P" ;
+.
+cv-corveg:site-sample-level-Q
+  rdf:type rdfs:Class ;
+  rdf:type skos:Concept ;
+  skos:definition "Quaternary site." ;
+  skos:prefLabel "Quaternary Site" ;
+  skos:hiddenLabel "4" ;
+  skos:notation "Q" ;
+.
+cv-corveg:site-sample-level-R
+  rdf:type rdfs:Class ;
+  rdf:type skos:Concept ;
+  skos:definition "Tertiary site." ;
+  skos:prefLabel "Tertiary Site" ;
+  skos:hiddenLabel "3" ;
+  skos:notation "R" ;
+.
+cv-corveg:site-sample-levels
+  rdf:type skos:Collection ;
+  skos:prefLabel "Site sample level concepts" ;
+  skos:member cv-corveg:site-sample-level-D ;
+  skos:member cv-corveg:site-sample-level-P ;
+  skos:member cv-corveg:site-sample-level-Q ;
+  skos:member cv-corveg:site-sample-level-R ;
+.
