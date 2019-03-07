@@ -1,12 +1,13 @@
+import rdflib
 import psycopg2 as pg
 import psycopg2.extras as pg_ex
 import os
 import sys
 sys.path.append("..")
-import config as cfg
-import rdflib
 import find_sample_cv as vocab
+import config as cfg
 from uri_prefixes import write_uri_prifixes
+
 
 class ProcessCorvegSiteTable:
     def __init__(self):
@@ -27,7 +28,7 @@ class ProcessCorvegSiteTable:
 
     def __process(self, rows):
 
-        ttl_file = open(os.path.join("../ttl_output", "corveg-site.ttl"), "w+") 
+        ttl_file = open(os.path.join("../ttl_output", "corveg-site.ttl"), "w+")
         write_uri_prifixes(ttl_file)
 
         for row in rows:
@@ -38,6 +39,11 @@ class ProcessCorvegSiteTable:
             ttl_file.write(f'\tdct:modified "{row["site_date"]}"^^xsd:date ; \r\n')
             ttl_file.write(f'\tdct:type {vocab.findCvSampleUri(row["samplelevel_id"],"SAMPLE_LEVEL")} ; \r\n')
             ttl_file.write(f'\tdct:type {vocab.findCvSampleUri(row["samplelevel_id"],"SAMPLE_TYPE")} ; \r\n')
+            ttl_file.write(f"\tplot:siteDescription ex-0:D-{row['site_id']}-1 ; \r\n")
+            ttl_file.write(f"\tlocn:location ex-0:L-{row['location_id']} ; \r\n")
+            ttl_file.write(f"\tprov:wasGeneratedBy ex-0:P-{row['project_id']} ; \r\n")
+
+            ttl_file.write(f'\tssn-ext:hasUltimateFeatureOfInterest bioregion:qld-CHC ; \r\n')
             ttl_file.write(". \r\n")
             # ttl_file.write("")
 
@@ -46,4 +52,4 @@ class ProcessCorvegSiteTable:
 
 if __name__ == "__main__":
     process = ProcessCorvegSiteTable()
-    process.generateTTLFile(number_of_rows=1)
+    process.generateTTLFile(number_of_rows=2)

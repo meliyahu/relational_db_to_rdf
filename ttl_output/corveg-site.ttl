@@ -19,6 +19,7 @@
 @prefix w3cgeo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix cv-corveg: <http://www.tern.org.au/cv/corveg/> .
+@prefix bioregion: <http://www.tern.org.au/cv/bioregion/> .
 
 ex-0:Site-61219 
 	rdf:type plot:Site ; 
@@ -27,4 +28,20 @@
 	dct:modified "0007-05-04"^^xsd:date ; 
 	dct:type cv-corveg:site-sample-level-D ; 
 	dct:type cv-corveg:site-sample-type-B ; 
+	plot:siteDescription ex-0:D-61219-1 ; 
+	locn:location ex-0:L-58236 ; 
+	prov:wasGeneratedBy ex-0:P-2144 ; 
+	ssn-ext:hasUltimateFeatureOfInterest bioregion:qld-CHC ; 
+. 
+ex-0:Site-61242 
+	rdf:type plot:Site ; 
+	dct:description "Photo Monk37H Monk37P Monk37Q. Bearing 0 S-N" ; 
+	dct:identifier "MONK36" ; 
+	dct:modified "0007-05-08"^^xsd:date ; 
+	dct:type cv-corveg:site-sample-level-D ; 
+	dct:type cv-corveg:site-sample-type-B ; 
+	plot:siteDescription ex-0:D-61242-1 ; 
+	locn:location ex-0:L-58257 ; 
+	prov:wasGeneratedBy ex-0:P-2144 ; 
+	ssn-ext:hasUltimateFeatureOfInterest bioregion:qld-CHC ; 
 . 

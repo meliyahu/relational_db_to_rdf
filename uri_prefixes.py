@@ -24,4 +24,5 @@ def write_uri_prifixes(file):
     file.write("@prefix w3cgeo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .\n")
     file.write("@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n")
     file.write("@prefix cv-corveg: <http://www.tern.org.au/cv/corveg/> .\n")
+    file.write("@prefix bioregion: <http://www.tern.org.au/cv/bioregion/> .\n")
     file.write("\n\r")
