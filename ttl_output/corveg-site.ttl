@@ -1,0 +1,92 @@
+@prefix ex-0: <http://www.tern.org.au/sites/> .
+@prefix data: <http://www.tern.org.au/ns/data/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dwcterms: <http://rs.tdwg.org/dwc/terms/> .
+@prefix geosparql: <http://www.opengis.net/ont/geosparql#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix plot: <http://www.tern.org.au/ns/plot/> .
+@prefix plot-x: <http://www.tern.org.au/ns/plot/x/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix ssn-ext: <http://www.w3.org/ns/ssn/ext/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix w3cgeo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cv-corveg: <http://www.tern.org.au/cv/corveg/> .
+
+ex-0:Site-61219 
+	rdf:type plot:Site ; 
+	dct:description "Photo Monk30H Monk30P Monk30Q. Bearing 180 N-S" ; 
+	dct:identifier "MONK29" ; 
+	dct:modified "0007-05-04"^^xsd:date ; 
+	dct:type cv-corveg:site-sample-level-D ; 
+. 
+ex-0:Site-61242 
+	rdf:type plot:Site ; 
+	dct:description "Photo Monk37H Monk37P Monk37Q. Bearing 0 S-N" ; 
+	dct:identifier "MONK36" ; 
+	dct:modified "0007-05-08"^^xsd:date ; 
+	dct:type cv-corveg:site-sample-level-D ; 
+. 
+ex-0:Site-61239 
+	rdf:type plot:Site ; 
+	dct:description "Monk34H Monk34P Monk34Q. Bearing 0 S-N" ; 
+	dct:identifier "MONK33" ; 
+	dct:modified "0007-05-08"^^xsd:date ; 
+	dct:type cv-corveg:site-sample-level-D ; 
+. 
+ex-0:Site-61243 
+	rdf:type plot:Site ; 
+	dct:description "Photo Monk38H Monk38P Monk38Q. Bearing 180 N-S" ; 
+	dct:identifier "MONK37" ; 
+	dct:modified "0007-05-08"^^xsd:date ; 
+	dct:type cv-corveg:site-sample-level-D ; 
+. 
+ex-0:Site-61245 
+	rdf:type plot:Site ; 
+	dct:description "Photo Monk39H Monk39P Monk39Q. Bearing 180 N-S" ; 
+	dct:identifier "MONK38" ; 
+	dct:modified "0007-05-08"^^xsd:date ; 
+	dct:type cv-corveg:site-sample-level-D ; 
+. 
+ex-0:Site-61222 
+	rdf:type plot:Site ; 
+	dct:description "Photo Monk31H Monk31P Monk31Q. Bearing 90 W-E" ; 
+	dct:identifier "MONK30" ; 
+	dct:modified "0007-05-09"^^xsd:date ; 
+	dct:type cv-corveg:site-sample-level-D ; 
+. 
+ex-0:Site-61228 
+	rdf:type plot:Site ; 
+	dct:description "Photo Monk33H Monk33P Monk33Q. Bearing 180 N-S" ; 
+	dct:identifier "MONK32" ; 
+	dct:modified "0007-05-09"^^xsd:date ; 
+	dct:type cv-corveg:site-sample-level-D ; 
+. 
+ex-0:Site-61225 
+	rdf:type plot:Site ; 
+	dct:description "Photo Monk32H Monk32P Monk32Q. Bearing 270 E-W" ; 
+	dct:identifier "MONK31" ; 
+	dct:modified "0007-05-09"^^xsd:date ; 
+	dct:type cv-corveg:site-sample-level-D ; 
+. 
+ex-0:Site-61241 
+	rdf:type plot:Site ; 
+	dct:description "Photo Monk36H Monk36P Monk36Q. Bearing 180 N-S" ; 
+	dct:identifier "MONK35" ; 
+	dct:modified "0007-05-09"^^xsd:date ; 
+	dct:type cv-corveg:site-sample-level-D ; 
+. 
+ex-0:Site-61240 
+	rdf:type plot:Site ; 
+	dct:description "Monk35H Monk35P Monk35Q. Bearing 20 S-N" ; 
+	dct:identifier "MONK34" ; 
+	dct:modified "0007-05-09"^^xsd:date ; 
+	dct:type cv-corveg:site-sample-level-D ; 
+. 
