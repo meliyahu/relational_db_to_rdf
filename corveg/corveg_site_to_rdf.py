@@ -5,7 +5,7 @@ import sys
 sys.path.append("..")
 import config as cfg
 import rdflib
-import find_sample_cv as sl_vocab
+import find_sample_cv as vocab
 from uri_prefixes import write_uri_prifixes
 
 class ProcessCorvegSiteTable:
@@ -14,9 +14,9 @@ class ProcessCorvegSiteTable:
         self.conn = pg.connect(**params)
         self.cur = self.conn.cursor(cursor_factory=pg_ex.DictCursor)
 
-    def generateTTLFile(self):
+    def generateTTLFile(self, number_of_rows=10):
         try:
-            self.cur.execute('SELECT * FROM site LIMIT 10')
+            self.cur.execute('SELECT * FROM site LIMIT ' + str(number_of_rows))
             rows = self.cur.fetchall()
             self.__process(rows)
         except (Exception, pg.DatabaseError) as error:
@@ -31,24 +31,13 @@ class ProcessCorvegSiteTable:
         write_uri_prifixes(ttl_file)
 
         for row in rows:
-            # print(f"ex-0:Site-{row['site_id']}")
-            # print(f"rdf:type plot:Site ;")
-            # print(f'dct:description "{row["description"].strip()}" ;')
-            # print(f'dct:identifier "{row["site_number"].strip()}" ;')
-            # print(f'dct:modified "{row["site_date"]}"^^xsd:date ;')
-            # print(f'dct:type {sl_vocab.findCvSampleUri(row["samplelevel_id"], "SAMPLE_LEVEL")} ;')
-            # print(f'dct:type {sl_vocab.findCvSampleUri(row["sampletype_id"],"SAMPLE_TYPE")} ;')
-            # print(".")
-            # print("")
-
-            ##
             ttl_file.write(f"ex-0:Site-{row['site_id']} \r\n")
             ttl_file.write(f"\trdf:type plot:Site ; \r\n")
             ttl_file.write(f'\tdct:description "{row["description"].strip()}" ; \r\n')
             ttl_file.write(f'\tdct:identifier "{row["site_number"].strip()}" ; \r\n')
             ttl_file.write(f'\tdct:modified "{row["site_date"]}"^^xsd:date ; \r\n')
-            ttl_file.write(f'\tdct:type {sl_vocab.findCvSampleUri(row["samplelevel_id"],"SAMPLE_LEVEL")} ; \r\n')
-            ttl_file.write(f'\tdct:type {sl_vocab.findCvSampleUri(row["samplelevel_id"],"SAMPLE_TYPE")} ; \r\n')
+            ttl_file.write(f'\tdct:type {vocab.findCvSampleUri(row["samplelevel_id"],"SAMPLE_LEVEL")} ; \r\n')
+            ttl_file.write(f'\tdct:type {vocab.findCvSampleUri(row["samplelevel_id"],"SAMPLE_TYPE")} ; \r\n')
             ttl_file.write(". \r\n")
             # ttl_file.write("")
 
@@ -57,4 +46,4 @@ class ProcessCorvegSiteTable:
 
 if __name__ == "__main__":
     process = ProcessCorvegSiteTable()
-    process.generateTTLFile()
+    process.generateTTLFile(number_of_rows=1)
