@@ -1,6 +1,3 @@
-# baseURI: http://www.tern.org.au/cv/corveg/site-sample-level
-# imports: http://www.w3.org/2004/02/skos/core
-
 @prefix cv-corveg: <http://www.tern.org.au/cv/corveg/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
