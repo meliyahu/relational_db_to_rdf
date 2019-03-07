@@ -1,6 +1,6 @@
 import rdflib
 #from rdflib.plugins.sparql import prepareQuery
-
+import os
 
 def double_quote(word):
     '''
@@ -18,7 +18,7 @@ def findSampleLevelUri(sampleLevelId):
     # The site-sample-level.ttl defines a common vacab for sample levels
     # which are foregn keys in the Site table, column value SAMPLELEVEL_ID
     g = rdflib.Graph()
-    result = g.parse("site-sample-level.ttl", format='turtle')
+    g.parse(os.path.join("../model_ttl", "site-sample-level.ttl"), format='turtle')
     # print(f"Graph has {len(g)} statements")
 
     query = '''
@@ -43,4 +43,4 @@ def findSampleLevelUri(sampleLevelId):
 
 
 if __name__ == "__main__":
-    print("URI =", findSampleLevelUri(30))
+    print("URI =", findSampleLevelUri(3))
