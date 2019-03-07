@@ -26,6 +26,7 @@
 	dct:identifier "MONK29" ; 
 	dct:modified "0007-05-04"^^xsd:date ; 
 	dct:type cv-corveg:site-sample-level-D ; 
+	dct:type cv-corveg:site-sample-type-B ; 
 . 
 ex-0:Site-61242 
 	rdf:type plot:Site ; 
@@ -33,6 +34,7 @@ ex-0:Site-61242
 	dct:identifier "MONK36" ; 
 	dct:modified "0007-05-08"^^xsd:date ; 
 	dct:type cv-corveg:site-sample-level-D ; 
+	dct:type cv-corveg:site-sample-type-B ; 
 . 
 ex-0:Site-61239 
 	rdf:type plot:Site ; 
@@ -40,6 +42,7 @@ ex-0:Site-61239
 	dct:identifier "MONK33" ; 
 	dct:modified "0007-05-08"^^xsd:date ; 
 	dct:type cv-corveg:site-sample-level-D ; 
+	dct:type cv-corveg:site-sample-type-B ; 
 . 
 ex-0:Site-61243 
 	rdf:type plot:Site ; 
@@ -47,6 +50,7 @@ ex-0:Site-61243
 	dct:identifier "MONK37" ; 
 	dct:modified "0007-05-08"^^xsd:date ; 
 	dct:type cv-corveg:site-sample-level-D ; 
+	dct:type cv-corveg:site-sample-type-B ; 
 . 
 ex-0:Site-61245 
 	rdf:type plot:Site ; 
@@ -54,6 +58,7 @@ ex-0:Site-61245
 	dct:identifier "MONK38" ; 
 	dct:modified "0007-05-08"^^xsd:date ; 
 	dct:type cv-corveg:site-sample-level-D ; 
+	dct:type cv-corveg:site-sample-type-B ; 
 . 
 ex-0:Site-61222 
 	rdf:type plot:Site ; 
@@ -61,6 +66,7 @@ ex-0:Site-61222
 	dct:identifier "MONK30" ; 
 	dct:modified "0007-05-09"^^xsd:date ; 
 	dct:type cv-corveg:site-sample-level-D ; 
+	dct:type cv-corveg:site-sample-type-B ; 
 . 
 ex-0:Site-61228 
 	rdf:type plot:Site ; 
@@ -68,6 +74,7 @@ ex-0:Site-61228
 	dct:identifier "MONK32" ; 
 	dct:modified "0007-05-09"^^xsd:date ; 
 	dct:type cv-corveg:site-sample-level-D ; 
+	dct:type cv-corveg:site-sample-type-B ; 
 . 
 ex-0:Site-61225 
 	rdf:type plot:Site ; 
@@ -75,6 +82,7 @@ ex-0:Site-61225
 	dct:identifier "MONK31" ; 
 	dct:modified "0007-05-09"^^xsd:date ; 
 	dct:type cv-corveg:site-sample-level-D ; 
+	dct:type cv-corveg:site-sample-type-B ; 
 . 
 ex-0:Site-61241 
 	rdf:type plot:Site ; 
@@ -82,6 +90,7 @@ ex-0:Site-61241
 	dct:identifier "MONK35" ; 
 	dct:modified "0007-05-09"^^xsd:date ; 
 	dct:type cv-corveg:site-sample-level-D ; 
+	dct:type cv-corveg:site-sample-type-B ; 
 . 
 ex-0:Site-61240 
 	rdf:type plot:Site ; 
@@ -89,4 +98,5 @@ ex-0:Site-61240
 	dct:identifier "MONK34" ; 
 	dct:modified "0007-05-09"^^xsd:date ; 
 	dct:type cv-corveg:site-sample-level-D ; 
+	dct:type cv-corveg:site-sample-type-B ; 
 . 

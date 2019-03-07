@@ -1,0 +1,127 @@
+# baseURI: http://www.tern.org.au/cv/corveg/site-sample-type
+# imports: http://www.w3.org/2004/02/skos/core
+
+@prefix cv-corveg: <http://www.tern.org.au/cv/corveg/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cv-corveg:site-sample-type
+  rdf:type owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+.
+cv-corveg:site-sample-types
+  rdf:type skos:Collection ;
+  skos:prefLabel "Site sample type concepts" ;
+  skos:member cv-corveg:site-sample-type-A ;
+  skos:member cv-corveg:site-sample-type-B ;
+  skos:member cv-corveg:site-sample-type-C ;
+  skos:member cv-corveg:site-sample-type-D ;
+  skos:member cv-corveg:site-sample-type-E ;
+  skos:member cv-corveg:site-sample-type-G ;
+  skos:member cv-corveg:site-sample-type-H ;
+  skos:member cv-corveg:site-sample-type-I ;
+  skos:member cv-corveg:site-sample-type-J ;
+  skos:member cv-corveg:site-sample-type-K ;
+  skos:member cv-corveg:site-sample-type-L ;
+  skos:member cv-corveg:site-sample-type-N ;
+.
+cv-corveg:site-sample-type-A
+  rdf:type rdfs:Class ;
+  rdf:type skos:Concept ;
+  skos:definition "Square." ;
+  skos:prefLabel "Square" ;
+  skos:hiddenLabel "1" ;
+  skos:notation "A" ;
+.
+cv-corveg:site-sample-type-B
+  rdf:type rdfs:Class ;
+  rdf:type skos:Concept ;
+  skos:definition "Circular." ;
+  skos:prefLabel "Circular" ;
+  skos:hiddenLabel "2" ;
+  skos:notation "B" ;
+.
+cv-corveg:site-sample-type-C
+  rdf:type rdfs:Class ;
+  rdf:type skos:Concept ;
+  skos:definition "Rectangular." ;
+  skos:prefLabel "Rectangular" ;
+  skos:hiddenLabel "3" ;
+  skos:notation "C" ;
+.
+cv-corveg:site-sample-type-D
+  rdf:type rdfs:Class ;
+  rdf:type skos:Concept ;
+  skos:definition "Belt transect." ;
+  skos:prefLabel "Belt Transect" ;
+  skos:hiddenLabel "4" ;
+  skos:notation "D" ;
+.
+cv-corveg:site-sample-type-E
+  rdf:type rdfs:Class ;
+  rdf:type skos:Concept ;
+  skos:definition "Irregular." ;
+  skos:prefLabel "Irregular" ;
+  skos:hiddenLabel "5" ;
+  skos:notation "E" ;
+.
+cv-corveg:site-sample-type-G
+  rdf:type rdfs:Class ;
+  rdf:type skos:Concept ;
+  skos:definition "Bitterlich." ;
+  skos:prefLabel "Bitterlich" ;
+  skos:hiddenLabel "7" ;
+  skos:notation "G" ;
+.
+cv-corveg:site-sample-type-H
+  rdf:type rdfs:Class ;
+  rdf:type skos:Concept ;
+  skos:definition "Point-centred quarter." ;
+  skos:prefLabel "Point-Centred Quarter" ;
+  skos:hiddenLabel "8" ;
+  skos:notation "H" ;
+.
+cv-corveg:site-sample-type-I
+  rdf:type rdfs:Class ;
+  rdf:type skos:Concept ;
+  skos:definition "Nearest neighbour." ;
+  skos:prefLabel "Nearest Neighbour" ;
+  skos:hiddenLabel "9" ;
+  skos:notation "I" ;
+.
+cv-corveg:site-sample-type-J
+  rdf:type rdfs:Class ;
+  rdf:type skos:Concept ;
+  skos:definition "Hybrid." ;
+  skos:prefLabel "Hybrid" ;
+  skos:hiddenLabel "10" ;
+  skos:notation "J" ;
+.
+cv-corveg:site-sample-type-K
+  rdf:type rdfs:Class ;
+  rdf:type skos:Concept ;
+  skos:definition "Releve-Braun-Blanquet." ;
+  skos:prefLabel "Releve-Braun-Blanquet" ;
+  skos:hiddenLabel "11" ;
+  skos:notation "K" ;
+.
+cv-corveg:site-sample-type-L
+  rdf:type rdfs:Class ;
+  rdf:type skos:Concept ;
+  skos:definition "Random/Plotless/Other." ;
+  skos:prefLabel "Random/Plotless/Other" ;
+  skos:hiddenLabel "12" ;
+  skos:notation "L" ;
+.
+cv-corveg:site-sample-type-N
+  rdf:type rdfs:Class ;
+  rdf:type skos:Concept ;
+  skos:definition "Nested." ;
+  skos:prefLabel "Nested" ;
+  skos:hiddenLabel "6" ;
+  skos:notation "N" ;
+.
