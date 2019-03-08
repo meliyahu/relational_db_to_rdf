@@ -3,6 +3,8 @@ def write_uri_prifixes(file):
     '''
       Prepends the uri prefixes to a passed in file
     '''
+
+    file.write("@prefix corveg: <http://www.tern.org.au/ontology/corveg#> .\n")
     file.write("@prefix ex-0: <http://www.tern.org.au/sites/> .\n")
     file.write("@prefix data: <http://www.tern.org.au/ns/data/> .\n")
     file.write("@prefix dct: <http://purl.org/dc/terms/> .\n")

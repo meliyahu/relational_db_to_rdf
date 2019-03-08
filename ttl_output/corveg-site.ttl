@@ -1,3 +1,4 @@
+@prefix corveg: <http://www.tern.org.au/ontology/corveg#> .
 @prefix ex-0: <http://www.tern.org.au/sites/> .
 @prefix data: <http://www.tern.org.au/ns/data/> .
 @prefix dct: <http://purl.org/dc/terms/> .
@@ -21,27 +22,43 @@
 @prefix cv-corveg: <http://www.tern.org.au/cv/corveg/> .
 @prefix bioregion: <http://www.tern.org.au/cv/bioregion/> .
 
-ex-0:Site-61219 
+corveg:Site-61219 
 	rdf:type plot:Site ; 
 	dct:description "Photo Monk30H Monk30P Monk30Q. Bearing 180 N-S" ; 
 	dct:identifier "MONK29" ; 
-	dct:modified "0007-05-04"^^xsd:date ; 
+	dct:modified "2017-11-29 01:00:00"^^xsd:date ; 
 	dct:type cv-corveg:site-sample-level-D ; 
 	dct:type cv-corveg:site-sample-type-B ; 
-	plot:siteDescription ex-0:D-61219-1 ; 
-	locn:location ex-0:L-58236 ; 
-	prov:wasGeneratedBy ex-0:P-2144 ; 
+	plot:siteDescription corveg:D-61219-1 ; 
+	locn:location corveg:L-58236 ; 
+	prov:wasGeneratedBy corveg:P-2144 ; 
 	ssn-ext:hasUltimateFeatureOfInterest bioregion:qld-CHC ; 
 . 
-ex-0:Site-61242 
+corveg:Site-61219 
+	rdf:type ssn-ext:ObservationCollection ; 
+	rdf:type ogroup:Site-description ; 
+	rdfs:label "Site 61219 basic description"@en ; 
+	sosa:hasFeatureOfInterest corveg:Site-61219 ; 
+	sosa:phenomenonTime corveg:T0007-05-04 ; 
+	sosa:resultTime "2017-11-29 01:00:00"^^xsd:dataTime ; 
+. 
+corveg:Site-61242 
 	rdf:type plot:Site ; 
 	dct:description "Photo Monk37H Monk37P Monk37Q. Bearing 0 S-N" ; 
 	dct:identifier "MONK36" ; 
-	dct:modified "0007-05-08"^^xsd:date ; 
+	dct:modified "2017-12-01 01:00:00"^^xsd:date ; 
 	dct:type cv-corveg:site-sample-level-D ; 
 	dct:type cv-corveg:site-sample-type-B ; 
-	plot:siteDescription ex-0:D-61242-1 ; 
-	locn:location ex-0:L-58257 ; 
-	prov:wasGeneratedBy ex-0:P-2144 ; 
+	plot:siteDescription corveg:D-61242-1 ; 
+	locn:location corveg:L-58257 ; 
+	prov:wasGeneratedBy corveg:P-2144 ; 
 	ssn-ext:hasUltimateFeatureOfInterest bioregion:qld-CHC ; 
+. 
+corveg:Site-61242 
+	rdf:type ssn-ext:ObservationCollection ; 
+	rdf:type ogroup:Site-description ; 
+	rdfs:label "Site 61242 basic description"@en ; 
+	sosa:hasFeatureOfInterest corveg:Site-61242 ; 
+	sosa:phenomenonTime corveg:T0007-05-08 ; 
+	sosa:resultTime "2017-12-01 01:00:00"^^xsd:dataTime ; 
 . 

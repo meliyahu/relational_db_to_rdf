@@ -32,22 +32,36 @@ class ProcessCorvegSiteTable:
         write_uri_prifixes(ttl_file)
 
         for row in rows:
-            ttl_file.write(f"ex-0:Site-{row['site_id']} \r\n")
+            print(f"Processing Corveg Site table. Site Id: {row['site_id']}.....")
+
+            ttl_file.write(f"corveg:Site-{row['site_id']} \r\n")
             ttl_file.write(f"\trdf:type plot:Site ; \r\n")
             ttl_file.write(f'\tdct:description "{row["description"].strip()}" ; \r\n')
             ttl_file.write(f'\tdct:identifier "{row["site_number"].strip()}" ; \r\n')
-            ttl_file.write(f'\tdct:modified "{row["site_date"]}"^^xsd:date ; \r\n')
+            ttl_file.write(f'\tdct:modified "{row["entry_date"]}"^^xsd:date ; \r\n')
             ttl_file.write(f'\tdct:type {vocab.findCvSampleUri(row["samplelevel_id"],"SAMPLE_LEVEL")} ; \r\n')
             ttl_file.write(f'\tdct:type {vocab.findCvSampleUri(row["samplelevel_id"],"SAMPLE_TYPE")} ; \r\n')
-            ttl_file.write(f"\tplot:siteDescription ex-0:D-{row['site_id']}-1 ; \r\n")
-            ttl_file.write(f"\tlocn:location ex-0:L-{row['location_id']} ; \r\n")
-            ttl_file.write(f"\tprov:wasGeneratedBy ex-0:P-{row['project_id']} ; \r\n")
-
+            ttl_file.write(f"\tplot:siteDescription corveg:D-{row['site_id']}-1 ; \r\n")
+            ttl_file.write(f"\tlocn:location corveg:L-{row['location_id']} ; \r\n")
+            ttl_file.write(f"\tprov:wasGeneratedBy corveg:P-{row['project_id']} ; \r\n")
             ttl_file.write(f'\tssn-ext:hasUltimateFeatureOfInterest bioregion:qld-CHC ; \r\n')
             ttl_file.write(". \r\n")
-            # ttl_file.write("")
+            # Description Observation Collection triples
+            ttl_file.write(f"corveg:Site-{row['site_id']} \r\n")
+            ttl_file.write(f"\trdf:type ssn-ext:ObservationCollection ; \r\n")
+            ttl_file.write(f"\trdf:type ogroup:Site-description ; \r\n")
+            ttl_file.write(f'\trdfs:label "Site {row["site_id"]} basic description"@en ; \r\n')
+            ttl_file.write(f'\tsosa:hasFeatureOfInterest corveg:Site-{row["site_id"]} ; \r\n')
+            # ttl_file.write(f'\tsosa:phenomenonTime "{row["site_date"]}"^^xsd:dateTime ; \r\n')
+            ttl_file.write(f'\tsosa:phenomenonTime corveg:T{row["site_date"]} ; \r\n')
+            ttl_file.write(f'\tsosa:resultTime "{row["entry_date"]}"^^xsd:dataTime ; \r\n')
+            
+            ttl_file.write(". \r\n")
 
         ttl_file.close()
+
+        print(f"\nTTL generation completed.")
+        print(f"\nProcessed {len(rows)} row/s of Corveg Site table.")
 
 
 if __name__ == "__main__":

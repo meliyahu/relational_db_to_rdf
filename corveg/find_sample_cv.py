@@ -5,7 +5,7 @@ import os
 
 def double_quote(word):
     '''
-      Put quotes arround a string
+      Puts quotes arround a string
     '''
     return '"%s"' % word
 
@@ -15,9 +15,9 @@ def findCvSampleUri(sampleId, cvType="SAMPLE_LEVEL"):
      Finds a tripl's uri (subject) whose hiddenLabel value is $sampleLevelId
     '''
 
-    # Create an RDF graph based on the site-sample-level.ttl TTL file
-    # The site-sample-level.ttl defines a common vacab for sample levels
-    # which are foregn keys in the Site table, column value SAMPLELEVEL_ID
+    # Create an RDF graph based on the site-sample-level.ttl or site-sample-type.ttl TTL files
+    # These ttl files define control vacabularies for sample levels and sample type respectively
+    # which are foregn keys in the Site table, columns SAMPLELEVEL_ID and SAMPLETYPE_ID
     g = rdflib.Graph()
 
     if (cvType == "SAMPLE_LEVEL"):
