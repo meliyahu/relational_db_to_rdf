@@ -59,11 +59,22 @@ class ProcessCorvegSiteTable:
                 
             # ttl_file.write(f'\tsosa:phenomenonTime "{row["site_date"]}"^^xsd:dateTime ; \r\n')
             ttl_file.write(f'\tsosa:phenomenonTime corveg:T{row["site_date"]} ; \r\n')
-            ttl_file.write(f'\tsosa:resultTime "{row["entry_date"]}"^^xsd:dataTime ; \r\n')
+            ttl_file.write(f'\tsosa:resultTime "{row["entry_date"]}"^^xsd:dateTime ; \r\n')
             ttl_file.write(". \r\n")
             # Process observations
             for obs in list_of_obs_dict:
-                pass
+                 ttl_file.write(f"corveg:{obs['uri']} \r\n")
+                 ttl_file.write(f"\trdf:type sosa:Observation ; \r\n")
+                 ttl_file.write(f"\tsosa:hasFeatureOfInterest corveg:Site-{row['site_id']} ; \r\n")
+                 ttl_file.write(f"\tsosa:hasResult [ \r\n")
+                 for result in obs['hasResult']:
+                    ttl_file.write(f"\t\t{result}\r\n")
+                 ttl_file.write(f"\t] ; \r\n")
+                 ttl_file.write(f"\tsosa:observedProperty op:{obs['obs_prop']} ; \r\n")
+                 ttl_file.write(f"\tsosa:phenomenonTime corveg:T{row['site_date']} ; \r\n")
+                 ttl_file.write(f'\tsosa:resultTime "{row["entry_date"]}"^^xsd:dateTime ; \r\n')
+                 ttl_file.write(". \r\n")
+                
 
 
         ttl_file.close()
@@ -85,36 +96,50 @@ class ProcessCorvegSiteTable:
             count += 1
             uri = "D-" + str(row["site_id"]) + "-" + str(count)
             obs_prop = "Cover-litter"
-            value = row['litter_percent']
-            observed_properties.append({'uri': uri,'obs_prop': obs_prop, 'value': value})
+            litterResult = []
+            litterResult.append("rdf:type data:Percent ;")
+            value = 'rdf:value "' + str(row['litter_percent']) + '"^^xsd:decimal ;'
+            litterResult.append(value)
+            observed_properties.append({'uri': uri,'obs_prop': obs_prop, 'hasResult': litterResult})
 
         # Check Cover-rock observed property
         if (row['rock_percent'] is not None):
             count += 1
             uri = "D-" + str(row["site_id"]) + "-" + str(count)
             obs_prop = "Cover-rock"
-            value = row['rock_percent']
-            observed_properties.append({'uri': uri,'obs_prop': obs_prop, 'value': value})
+            rockResult = []
+            rockResult.append("rdf:type data:Percent ;")
+            value = 'rdf:value "' + str(row['rock_percent']) + '"^^xsd:decimal ;'
+            rockResult.append(value)
+            observed_properties.append({'uri': uri,'obs_prop': obs_prop, 'hasResult': rockResult})
         
         # Check Cover-bare observed property
         if (row['bare_percent'] is not None):
             count += 1
             uri = "D-" + str(row["site_id"]) + "-" + str(count)
             obs_prop = "Cover-bare"
-            value = row['bare_percent']
-            observed_properties.append({'uri': uri,'obs_prop': obs_prop, 'value': value})
+            rockResult = []
+            rockResult.append("rdf:type data:Percent ;")
+            value = 'rdf:value "' + str(row['bare_percent']) + '"^^xsd:decimal ;'
+            rockResult.append(value)
+            observed_properties.append({'uri': uri,'obs_prop': obs_prop, 'hasResult': rockResult})
         
         # Check Cover-crypto observed property
         if (row['crypto_percent'] is not None):
             count += 1
             uri = "D-" + str(row["site_id"]) + "-" + str(count)
             obs_prop = "Cover-crypto"
-            value = row['crypto_percent']
-            observed_properties.append({'uri': uri,'obs_prop': obs_prop, 'value': value})
+            cryptoResult = []
+            cryptoResult.append("rdf:type data:Percent ;")
+            value = 'rdf:value "' + str(row['crypto_percent']) + '"^^xsd:decimal ;'
+            cryptoResult.append(value)
+            observed_properties.append({'uri': uri,'obs_prop': obs_prop, 'hasResult': cryptoResult})
         
+        # TODO add Area observation
+
         return observed_properties
 
 
 if __name__ == "__main__":
     process = ProcessCorvegSiteTable()
-    process.generateTTLFile(number_of_rows=2)
+    process.generateTTLFile(number_of_rows=10)

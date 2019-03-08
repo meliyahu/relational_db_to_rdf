@@ -44,7 +44,51 @@ corveg:D-61219
 	ssn-ext:hasMember corveg:D-61219-3 ; 
 	ssn-ext:hasMember corveg:D-61219-4 ; 
 	sosa:phenomenonTime corveg:T0007-05-04 ; 
-	sosa:resultTime "2017-11-29 01:00:00"^^xsd:dataTime ; 
+	sosa:resultTime "2017-11-29 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61219-1 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61219 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "1"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-litter ; 
+	sosa:phenomenonTime corveg:T0007-05-04 ; 
+	sosa:resultTime "2017-11-29 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61219-2 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61219 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "0"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-rock ; 
+	sosa:phenomenonTime corveg:T0007-05-04 ; 
+	sosa:resultTime "2017-11-29 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61219-3 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61219 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "84.4"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-bare ; 
+	sosa:phenomenonTime corveg:T0007-05-04 ; 
+	sosa:resultTime "2017-11-29 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61219-4 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61219 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "0"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-crypto ; 
+	sosa:phenomenonTime corveg:T0007-05-04 ; 
+	sosa:resultTime "2017-11-29 01:00:00"^^xsd:dateTime ; 
 . 
 corveg:Site-61242 
 	rdf:type plot:Site ; 
@@ -68,5 +112,593 @@ corveg:D-61242
 	ssn-ext:hasMember corveg:D-61242-3 ; 
 	ssn-ext:hasMember corveg:D-61242-4 ; 
 	sosa:phenomenonTime corveg:T0007-05-08 ; 
-	sosa:resultTime "2017-12-01 01:00:00"^^xsd:dataTime ; 
+	sosa:resultTime "2017-12-01 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61242-1 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61242 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "1"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-litter ; 
+	sosa:phenomenonTime corveg:T0007-05-08 ; 
+	sosa:resultTime "2017-12-01 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61242-2 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61242 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "0"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-rock ; 
+	sosa:phenomenonTime corveg:T0007-05-08 ; 
+	sosa:resultTime "2017-12-01 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61242-3 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61242 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "95.7"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-bare ; 
+	sosa:phenomenonTime corveg:T0007-05-08 ; 
+	sosa:resultTime "2017-12-01 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61242-4 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61242 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "0"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-crypto ; 
+	sosa:phenomenonTime corveg:T0007-05-08 ; 
+	sosa:resultTime "2017-12-01 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:Site-61239 
+	rdf:type plot:Site ; 
+	dct:description "Monk34H Monk34P Monk34Q. Bearing 0 S-N" ; 
+	dct:identifier "MONK33" ; 
+	dct:modified "2017-11-30 01:00:00"^^xsd:date ; 
+	dct:type cv-corveg:site-sample-level-D ; 
+	dct:type cv-corveg:site-sample-type-B ; 
+	plot:siteDescription corveg:D-61239 ; 
+	locn:location corveg:L-58254 ; 
+	prov:wasGeneratedBy corveg:P-2144 ; 
+	ssn-ext:hasUltimateFeatureOfInterest bioregion:qld-CHC ; 
+. 
+corveg:D-61239 
+	rdf:type ssn-ext:ObservationCollection ; 
+	rdf:type ogroup:Site-description ; 
+	rdfs:label "Site 61239 basic description"@en ; 
+	sosa:hasFeatureOfInterest corveg:Site-61239 ; 
+	ssn-ext:hasMember corveg:D-61239-1 ; 
+	ssn-ext:hasMember corveg:D-61239-2 ; 
+	ssn-ext:hasMember corveg:D-61239-3 ; 
+	ssn-ext:hasMember corveg:D-61239-4 ; 
+	sosa:phenomenonTime corveg:T0007-05-08 ; 
+	sosa:resultTime "2017-11-30 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61239-1 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61239 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "1"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-litter ; 
+	sosa:phenomenonTime corveg:T0007-05-08 ; 
+	sosa:resultTime "2017-11-30 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61239-2 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61239 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "0"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-rock ; 
+	sosa:phenomenonTime corveg:T0007-05-08 ; 
+	sosa:resultTime "2017-11-30 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61239-3 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61239 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "90.3"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-bare ; 
+	sosa:phenomenonTime corveg:T0007-05-08 ; 
+	sosa:resultTime "2017-11-30 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61239-4 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61239 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "0"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-crypto ; 
+	sosa:phenomenonTime corveg:T0007-05-08 ; 
+	sosa:resultTime "2017-11-30 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:Site-61243 
+	rdf:type plot:Site ; 
+	dct:description "Photo Monk38H Monk38P Monk38Q. Bearing 180 N-S" ; 
+	dct:identifier "MONK37" ; 
+	dct:modified "2017-12-01 01:00:00"^^xsd:date ; 
+	dct:type cv-corveg:site-sample-level-D ; 
+	dct:type cv-corveg:site-sample-type-B ; 
+	plot:siteDescription corveg:D-61243 ; 
+	locn:location corveg:L-58258 ; 
+	prov:wasGeneratedBy corveg:P-2144 ; 
+	ssn-ext:hasUltimateFeatureOfInterest bioregion:qld-CHC ; 
+. 
+corveg:D-61243 
+	rdf:type ssn-ext:ObservationCollection ; 
+	rdf:type ogroup:Site-description ; 
+	rdfs:label "Site 61243 basic description"@en ; 
+	sosa:hasFeatureOfInterest corveg:Site-61243 ; 
+	ssn-ext:hasMember corveg:D-61243-1 ; 
+	ssn-ext:hasMember corveg:D-61243-2 ; 
+	ssn-ext:hasMember corveg:D-61243-3 ; 
+	ssn-ext:hasMember corveg:D-61243-4 ; 
+	sosa:phenomenonTime corveg:T0007-05-08 ; 
+	sosa:resultTime "2017-12-01 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61243-1 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61243 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "0"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-litter ; 
+	sosa:phenomenonTime corveg:T0007-05-08 ; 
+	sosa:resultTime "2017-12-01 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61243-2 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61243 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "0"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-rock ; 
+	sosa:phenomenonTime corveg:T0007-05-08 ; 
+	sosa:resultTime "2017-12-01 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61243-3 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61243 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "94.8"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-bare ; 
+	sosa:phenomenonTime corveg:T0007-05-08 ; 
+	sosa:resultTime "2017-12-01 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61243-4 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61243 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "0"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-crypto ; 
+	sosa:phenomenonTime corveg:T0007-05-08 ; 
+	sosa:resultTime "2017-12-01 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:Site-61245 
+	rdf:type plot:Site ; 
+	dct:description "Photo Monk39H Monk39P Monk39Q. Bearing 180 N-S" ; 
+	dct:identifier "MONK38" ; 
+	dct:modified "2017-12-01 01:00:00"^^xsd:date ; 
+	dct:type cv-corveg:site-sample-level-D ; 
+	dct:type cv-corveg:site-sample-type-B ; 
+	plot:siteDescription corveg:D-61245 ; 
+	locn:location corveg:L-58260 ; 
+	prov:wasGeneratedBy corveg:P-2144 ; 
+	ssn-ext:hasUltimateFeatureOfInterest bioregion:qld-CHC ; 
+. 
+corveg:D-61245 
+	rdf:type ssn-ext:ObservationCollection ; 
+	rdf:type ogroup:Site-description ; 
+	rdfs:label "Site 61245 basic description"@en ; 
+	sosa:hasFeatureOfInterest corveg:Site-61245 ; 
+	ssn-ext:hasMember corveg:D-61245-1 ; 
+	ssn-ext:hasMember corveg:D-61245-2 ; 
+	ssn-ext:hasMember corveg:D-61245-3 ; 
+	ssn-ext:hasMember corveg:D-61245-4 ; 
+	sosa:phenomenonTime corveg:T0007-05-08 ; 
+	sosa:resultTime "2017-12-01 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61245-1 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61245 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "1"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-litter ; 
+	sosa:phenomenonTime corveg:T0007-05-08 ; 
+	sosa:resultTime "2017-12-01 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61245-2 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61245 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "0"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-rock ; 
+	sosa:phenomenonTime corveg:T0007-05-08 ; 
+	sosa:resultTime "2017-12-01 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61245-3 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61245 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "97.5"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-bare ; 
+	sosa:phenomenonTime corveg:T0007-05-08 ; 
+	sosa:resultTime "2017-12-01 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61245-4 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61245 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "0"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-crypto ; 
+	sosa:phenomenonTime corveg:T0007-05-08 ; 
+	sosa:resultTime "2017-12-01 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:Site-61222 
+	rdf:type plot:Site ; 
+	dct:description "Photo Monk31H Monk31P Monk31Q. Bearing 90 W-E" ; 
+	dct:identifier "MONK30" ; 
+	dct:modified "2017-11-30 01:00:00"^^xsd:date ; 
+	dct:type cv-corveg:site-sample-level-D ; 
+	dct:type cv-corveg:site-sample-type-B ; 
+	plot:siteDescription corveg:D-61222 ; 
+	locn:location corveg:L-58238 ; 
+	prov:wasGeneratedBy corveg:P-2144 ; 
+	ssn-ext:hasUltimateFeatureOfInterest bioregion:qld-CHC ; 
+. 
+corveg:D-61222 
+	rdf:type ssn-ext:ObservationCollection ; 
+	rdf:type ogroup:Site-description ; 
+	rdfs:label "Site 61222 basic description"@en ; 
+	sosa:hasFeatureOfInterest corveg:Site-61222 ; 
+	ssn-ext:hasMember corveg:D-61222-1 ; 
+	ssn-ext:hasMember corveg:D-61222-2 ; 
+	ssn-ext:hasMember corveg:D-61222-3 ; 
+	ssn-ext:hasMember corveg:D-61222-4 ; 
+	sosa:phenomenonTime corveg:T0007-05-09 ; 
+	sosa:resultTime "2017-11-30 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61222-1 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61222 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "1"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-litter ; 
+	sosa:phenomenonTime corveg:T0007-05-09 ; 
+	sosa:resultTime "2017-11-30 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61222-2 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61222 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "0"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-rock ; 
+	sosa:phenomenonTime corveg:T0007-05-09 ; 
+	sosa:resultTime "2017-11-30 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61222-3 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61222 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "98.3"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-bare ; 
+	sosa:phenomenonTime corveg:T0007-05-09 ; 
+	sosa:resultTime "2017-11-30 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61222-4 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61222 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "0"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-crypto ; 
+	sosa:phenomenonTime corveg:T0007-05-09 ; 
+	sosa:resultTime "2017-11-30 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:Site-61228 
+	rdf:type plot:Site ; 
+	dct:description "Photo Monk33H Monk33P Monk33Q. Bearing 180 N-S" ; 
+	dct:identifier "MONK32" ; 
+	dct:modified "2017-11-30 01:00:00"^^xsd:date ; 
+	dct:type cv-corveg:site-sample-level-D ; 
+	dct:type cv-corveg:site-sample-type-B ; 
+	plot:siteDescription corveg:D-61228 ; 
+	locn:location corveg:L-58243 ; 
+	prov:wasGeneratedBy corveg:P-2144 ; 
+	ssn-ext:hasUltimateFeatureOfInterest bioregion:qld-CHC ; 
+. 
+corveg:D-61228 
+	rdf:type ssn-ext:ObservationCollection ; 
+	rdf:type ogroup:Site-description ; 
+	rdfs:label "Site 61228 basic description"@en ; 
+	sosa:hasFeatureOfInterest corveg:Site-61228 ; 
+	ssn-ext:hasMember corveg:D-61228-1 ; 
+	ssn-ext:hasMember corveg:D-61228-2 ; 
+	ssn-ext:hasMember corveg:D-61228-3 ; 
+	ssn-ext:hasMember corveg:D-61228-4 ; 
+	sosa:phenomenonTime corveg:T0007-05-09 ; 
+	sosa:resultTime "2017-11-30 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61228-1 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61228 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "3"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-litter ; 
+	sosa:phenomenonTime corveg:T0007-05-09 ; 
+	sosa:resultTime "2017-11-30 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61228-2 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61228 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "0"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-rock ; 
+	sosa:phenomenonTime corveg:T0007-05-09 ; 
+	sosa:resultTime "2017-11-30 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61228-3 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61228 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "95.6"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-bare ; 
+	sosa:phenomenonTime corveg:T0007-05-09 ; 
+	sosa:resultTime "2017-11-30 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61228-4 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61228 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "0"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-crypto ; 
+	sosa:phenomenonTime corveg:T0007-05-09 ; 
+	sosa:resultTime "2017-11-30 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:Site-61225 
+	rdf:type plot:Site ; 
+	dct:description "Photo Monk32H Monk32P Monk32Q. Bearing 270 E-W" ; 
+	dct:identifier "MONK31" ; 
+	dct:modified "2017-11-30 01:00:00"^^xsd:date ; 
+	dct:type cv-corveg:site-sample-level-D ; 
+	dct:type cv-corveg:site-sample-type-B ; 
+	plot:siteDescription corveg:D-61225 ; 
+	locn:location corveg:L-58241 ; 
+	prov:wasGeneratedBy corveg:P-2144 ; 
+	ssn-ext:hasUltimateFeatureOfInterest bioregion:qld-CHC ; 
+. 
+corveg:D-61225 
+	rdf:type ssn-ext:ObservationCollection ; 
+	rdf:type ogroup:Site-description ; 
+	rdfs:label "Site 61225 basic description"@en ; 
+	sosa:hasFeatureOfInterest corveg:Site-61225 ; 
+	ssn-ext:hasMember corveg:D-61225-1 ; 
+	ssn-ext:hasMember corveg:D-61225-2 ; 
+	ssn-ext:hasMember corveg:D-61225-3 ; 
+	ssn-ext:hasMember corveg:D-61225-4 ; 
+	sosa:phenomenonTime corveg:T0007-05-09 ; 
+	sosa:resultTime "2017-11-30 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61225-1 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61225 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "2"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-litter ; 
+	sosa:phenomenonTime corveg:T0007-05-09 ; 
+	sosa:resultTime "2017-11-30 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61225-2 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61225 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "1"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-rock ; 
+	sosa:phenomenonTime corveg:T0007-05-09 ; 
+	sosa:resultTime "2017-11-30 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61225-3 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61225 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "93.4"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-bare ; 
+	sosa:phenomenonTime corveg:T0007-05-09 ; 
+	sosa:resultTime "2017-11-30 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61225-4 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61225 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "0"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-crypto ; 
+	sosa:phenomenonTime corveg:T0007-05-09 ; 
+	sosa:resultTime "2017-11-30 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:Site-61241 
+	rdf:type plot:Site ; 
+	dct:description "Photo Monk36H Monk36P Monk36Q. Bearing 180 N-S" ; 
+	dct:identifier "MONK35" ; 
+	dct:modified "2017-11-30 01:00:00"^^xsd:date ; 
+	dct:type cv-corveg:site-sample-level-D ; 
+	dct:type cv-corveg:site-sample-type-B ; 
+	plot:siteDescription corveg:D-61241 ; 
+	locn:location corveg:L-58256 ; 
+	prov:wasGeneratedBy corveg:P-2144 ; 
+	ssn-ext:hasUltimateFeatureOfInterest bioregion:qld-CHC ; 
+. 
+corveg:D-61241 
+	rdf:type ssn-ext:ObservationCollection ; 
+	rdf:type ogroup:Site-description ; 
+	rdfs:label "Site 61241 basic description"@en ; 
+	sosa:hasFeatureOfInterest corveg:Site-61241 ; 
+	ssn-ext:hasMember corveg:D-61241-1 ; 
+	ssn-ext:hasMember corveg:D-61241-2 ; 
+	ssn-ext:hasMember corveg:D-61241-3 ; 
+	ssn-ext:hasMember corveg:D-61241-4 ; 
+	sosa:phenomenonTime corveg:T0007-05-09 ; 
+	sosa:resultTime "2017-11-30 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61241-1 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61241 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "2"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-litter ; 
+	sosa:phenomenonTime corveg:T0007-05-09 ; 
+	sosa:resultTime "2017-11-30 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61241-2 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61241 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "0"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-rock ; 
+	sosa:phenomenonTime corveg:T0007-05-09 ; 
+	sosa:resultTime "2017-11-30 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61241-3 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61241 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "96.3"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-bare ; 
+	sosa:phenomenonTime corveg:T0007-05-09 ; 
+	sosa:resultTime "2017-11-30 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61241-4 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61241 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "0"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-crypto ; 
+	sosa:phenomenonTime corveg:T0007-05-09 ; 
+	sosa:resultTime "2017-11-30 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:Site-61240 
+	rdf:type plot:Site ; 
+	dct:description "Monk35H Monk35P Monk35Q. Bearing 20 S-N" ; 
+	dct:identifier "MONK34" ; 
+	dct:modified "2017-11-30 01:00:00"^^xsd:date ; 
+	dct:type cv-corveg:site-sample-level-D ; 
+	dct:type cv-corveg:site-sample-type-B ; 
+	plot:siteDescription corveg:D-61240 ; 
+	locn:location corveg:L-58255 ; 
+	prov:wasGeneratedBy corveg:P-2144 ; 
+	ssn-ext:hasUltimateFeatureOfInterest bioregion:qld-CHC ; 
+. 
+corveg:D-61240 
+	rdf:type ssn-ext:ObservationCollection ; 
+	rdf:type ogroup:Site-description ; 
+	rdfs:label "Site 61240 basic description"@en ; 
+	sosa:hasFeatureOfInterest corveg:Site-61240 ; 
+	ssn-ext:hasMember corveg:D-61240-1 ; 
+	ssn-ext:hasMember corveg:D-61240-2 ; 
+	ssn-ext:hasMember corveg:D-61240-3 ; 
+	ssn-ext:hasMember corveg:D-61240-4 ; 
+	sosa:phenomenonTime corveg:T0007-05-09 ; 
+	sosa:resultTime "2017-11-30 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61240-1 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61240 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "2"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-litter ; 
+	sosa:phenomenonTime corveg:T0007-05-09 ; 
+	sosa:resultTime "2017-11-30 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61240-2 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61240 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "0"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-rock ; 
+	sosa:phenomenonTime corveg:T0007-05-09 ; 
+	sosa:resultTime "2017-11-30 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61240-3 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61240 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "95.3"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-bare ; 
+	sosa:phenomenonTime corveg:T0007-05-09 ; 
+	sosa:resultTime "2017-11-30 01:00:00"^^xsd:dateTime ; 
+. 
+corveg:D-61240-4 
+	rdf:type sosa:Observation ; 
+	sosa:hasFeatureOfInterest corveg:Site-61240 ; 
+	sosa:hasResult [ 
+		rdf:type data:Percent ;
+		rdf:value "0"^^xsd:decimal ;
+	] ; 
+	sosa:observedProperty op:Cover-crypto ; 
+	sosa:phenomenonTime corveg:T0007-05-09 ; 
+	sosa:resultTime "2017-11-30 01:00:00"^^xsd:dateTime ; 
 . 
