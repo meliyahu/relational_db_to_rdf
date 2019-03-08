@@ -10,14 +10,24 @@ from uri_prefixes import write_uri_prifixes
 
 
 class ProcessCorvegSiteTable:
+    '''
+     Converts all the rows (10541) in the Site table of Corveg
+     into triples following Simon Cox's model and then creates
+     a TTL file.
+    '''
     def __init__(self):
         params = cfg.config(filename='corveg_database.ini')
         self.conn = pg.connect(**params)
         self.cur = self.conn.cursor(cursor_factory=pg_ex.DictCursor)
 
     def generateTTLFile(self, number_of_rows=10):
+        '''
+         Passing number_of_rows="NULL" will process all rows
+        '''
         try:
-            self.cur.execute('SELECT * FROM site LIMIT ' + str(number_of_rows))
+            sql = 'SELECT * FROM site LIMIT ' + str(number_of_rows)
+            print(f"Executing query: {sql}")
+            self.cur.execute(sql)
             rows = self.cur.fetchall()
             self.__process(rows)
         except (Exception, pg.DatabaseError) as error:
@@ -27,7 +37,9 @@ class ProcessCorvegSiteTable:
                 self.conn.close()
 
     def __process(self, rows):
-
+        '''
+          Process each row and generate triples and write to TTL file
+        '''
         ttl_file = open(os.path.join("../ttl_output", "corveg-site.ttl"), "w+")
         write_uri_prifixes(ttl_file)
 
@@ -142,4 +154,4 @@ class ProcessCorvegSiteTable:
 
 if __name__ == "__main__":
     process = ProcessCorvegSiteTable()
-    process.generateTTLFile(number_of_rows=10)
+    process.generateTTLFile(number_of_rows=1)
