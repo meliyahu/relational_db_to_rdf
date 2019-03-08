@@ -41,27 +41,78 @@ class ProcessCorvegSiteTable:
             ttl_file.write(f'\tdct:modified "{row["entry_date"]}"^^xsd:date ; \r\n')
             ttl_file.write(f'\tdct:type {vocab.findCvSampleUri(row["samplelevel_id"],"SAMPLE_LEVEL")} ; \r\n')
             ttl_file.write(f'\tdct:type {vocab.findCvSampleUri(row["samplelevel_id"],"SAMPLE_TYPE")} ; \r\n')
-            ttl_file.write(f"\tplot:siteDescription corveg:D-{row['site_id']}-1 ; \r\n")
+            ttl_file.write(f"\tplot:siteDescription corveg:D-{row['site_id']} ; \r\n")
             ttl_file.write(f"\tlocn:location corveg:L-{row['location_id']} ; \r\n")
             ttl_file.write(f"\tprov:wasGeneratedBy corveg:P-{row['project_id']} ; \r\n")
             ttl_file.write(f'\tssn-ext:hasUltimateFeatureOfInterest bioregion:qld-CHC ; \r\n')
             ttl_file.write(". \r\n")
+
             # Description Observation Collection triples
-            ttl_file.write(f"corveg:Site-{row['site_id']} \r\n")
+            ttl_file.write(f"corveg:D-{row['site_id']} \r\n")
             ttl_file.write(f"\trdf:type ssn-ext:ObservationCollection ; \r\n")
             ttl_file.write(f"\trdf:type ogroup:Site-description ; \r\n")
             ttl_file.write(f'\trdfs:label "Site {row["site_id"]} basic description"@en ; \r\n')
             ttl_file.write(f'\tsosa:hasFeatureOfInterest corveg:Site-{row["site_id"]} ; \r\n')
+            list_of_obs_dict = self.get_site_descrption_observations(row)
+            for obs in list_of_obs_dict:
+                ttl_file.write(f"\tssn-ext:hasMember corveg:{obs['uri']} ; \r\n")
+                
             # ttl_file.write(f'\tsosa:phenomenonTime "{row["site_date"]}"^^xsd:dateTime ; \r\n')
             ttl_file.write(f'\tsosa:phenomenonTime corveg:T{row["site_date"]} ; \r\n')
             ttl_file.write(f'\tsosa:resultTime "{row["entry_date"]}"^^xsd:dataTime ; \r\n')
-            
             ttl_file.write(". \r\n")
+            # Process observations
+            for obs in list_of_obs_dict:
+                pass
+
 
         ttl_file.close()
 
         print(f"\nTTL generation completed.")
         print(f"\nProcessed {len(rows)} row/s of Corveg Site table.")
+    
+    def get_site_descrption_observations(self, row):
+        '''
+         Checks if description observations are captured.
+         If so we want to create triples for the observations.
+         If not, no triples need to be generated.
+        '''
+        observed_properties = []
+        count = 0
+
+        # Check Cover-litter observed property
+        if (row['litter_percent'] is not None):
+            count += 1
+            uri = "D-" + str(row["site_id"]) + "-" + str(count)
+            obs_prop = "Cover-litter"
+            value = row['litter_percent']
+            observed_properties.append({'uri': uri,'obs_prop': obs_prop, 'value': value})
+
+        # Check Cover-rock observed property
+        if (row['rock_percent'] is not None):
+            count += 1
+            uri = "D-" + str(row["site_id"]) + "-" + str(count)
+            obs_prop = "Cover-rock"
+            value = row['rock_percent']
+            observed_properties.append({'uri': uri,'obs_prop': obs_prop, 'value': value})
+        
+        # Check Cover-bare observed property
+        if (row['bare_percent'] is not None):
+            count += 1
+            uri = "D-" + str(row["site_id"]) + "-" + str(count)
+            obs_prop = "Cover-bare"
+            value = row['bare_percent']
+            observed_properties.append({'uri': uri,'obs_prop': obs_prop, 'value': value})
+        
+        # Check Cover-crypto observed property
+        if (row['crypto_percent'] is not None):
+            count += 1
+            uri = "D-" + str(row["site_id"]) + "-" + str(count)
+            obs_prop = "Cover-crypto"
+            value = row['crypto_percent']
+            observed_properties.append({'uri': uri,'obs_prop': obs_prop, 'value': value})
+        
+        return observed_properties
 
 
 if __name__ == "__main__":

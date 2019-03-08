@@ -29,16 +29,20 @@
 	dct:modified "2017-11-29 01:00:00"^^xsd:date ; 
 	dct:type cv-corveg:site-sample-level-D ; 
 	dct:type cv-corveg:site-sample-type-B ; 
-	plot:siteDescription corveg:D-61219-1 ; 
+	plot:siteDescription corveg:D-61219 ; 
 	locn:location corveg:L-58236 ; 
 	prov:wasGeneratedBy corveg:P-2144 ; 
 	ssn-ext:hasUltimateFeatureOfInterest bioregion:qld-CHC ; 
 . 
-corveg:Site-61219 
+corveg:D-61219 
 	rdf:type ssn-ext:ObservationCollection ; 
 	rdf:type ogroup:Site-description ; 
 	rdfs:label "Site 61219 basic description"@en ; 
 	sosa:hasFeatureOfInterest corveg:Site-61219 ; 
+	ssn-ext:hasMember corveg:D-61219-1 ; 
+	ssn-ext:hasMember corveg:D-61219-2 ; 
+	ssn-ext:hasMember corveg:D-61219-3 ; 
+	ssn-ext:hasMember corveg:D-61219-4 ; 
 	sosa:phenomenonTime corveg:T0007-05-04 ; 
 	sosa:resultTime "2017-11-29 01:00:00"^^xsd:dataTime ; 
 . 
@@ -49,16 +53,20 @@ corveg:Site-61242
 	dct:modified "2017-12-01 01:00:00"^^xsd:date ; 
 	dct:type cv-corveg:site-sample-level-D ; 
 	dct:type cv-corveg:site-sample-type-B ; 
-	plot:siteDescription corveg:D-61242-1 ; 
+	plot:siteDescription corveg:D-61242 ; 
 	locn:location corveg:L-58257 ; 
 	prov:wasGeneratedBy corveg:P-2144 ; 
 	ssn-ext:hasUltimateFeatureOfInterest bioregion:qld-CHC ; 
 . 
-corveg:Site-61242 
+corveg:D-61242 
 	rdf:type ssn-ext:ObservationCollection ; 
 	rdf:type ogroup:Site-description ; 
 	rdfs:label "Site 61242 basic description"@en ; 
 	sosa:hasFeatureOfInterest corveg:Site-61242 ; 
+	ssn-ext:hasMember corveg:D-61242-1 ; 
+	ssn-ext:hasMember corveg:D-61242-2 ; 
+	ssn-ext:hasMember corveg:D-61242-3 ; 
+	ssn-ext:hasMember corveg:D-61242-4 ; 
 	sosa:phenomenonTime corveg:T0007-05-08 ; 
 	sosa:resultTime "2017-12-01 01:00:00"^^xsd:dataTime ; 
 . 
